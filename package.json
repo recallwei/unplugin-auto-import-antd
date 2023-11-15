@@ -1,0 +1,70 @@
+{
+  "name": "unplugin-auto-import-antd",
+  "version": "0.0.0",
+  "description": "unplugin-auto-import-antd is a resolver for unplugin-auto-import that enables on-demand importing of antd components.",
+  "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
+  "repository": "github:recallwei/unplugin-auto-import-antd",
+  "homepage": "https://github.com/recallwei/unplugin-auto-import-antd#readme",
+  "bugs": "https://github.com/recallwei/unplugin-auto-import-antd/issues",
+  "keywords": [
+    "unplugin-auto-import",
+    "auto-import",
+    "auto-import-antd",
+    "unplugin-auto-import-antd",
+    "antd",
+    "vite"
+  ],
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "dev": "unbuild --stub",
+    "build": "unbuild",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "pnpm run build",
+    "release:generate": "pnpm changeset",
+    "release:version": "pnpm changeset version",
+    "release:publish": "pnpm build && pnpm changeset publish",
+    "cspell:check": "cspell \"**\"",
+    "eslint:check": "eslint \"**/*.{ts,tsx}\" --color",
+    "eslint:fix": "pnpm eslint:check --fix",
+    "prettier:check": "prettier --check --ignore-unknown .",
+    "prettier:fix": "prettier --write --ignore-unknown .",
+    "cz": "git-cz",
+    "preinstall": "npx only-allow pnpm",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@brucesong/eslint-config-ts": "^1.0.14",
+    "@commitlint/cli": "^18.4.1",
+    "@commitlint/config-conventional": "^18.4.0",
+    "commitizen": "^4.3.0",
+    "cspell": "^8.0.0",
+    "cz-git": "^1.7.1",
+    "eslint": "^8.53.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.1.0",
+    "prettier": "^3.1.0",
+    "unbuild": "^2.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@changesets/cli": "^2.26.2",
+    "unplugin-auto-import": "^0.16.7"
+  }
+}

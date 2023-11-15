@@ -1,19 +1,19 @@
 # unplugin-auto-import-antd
 
-English / [简体中文](./README.zh-CN.md)
+[English](./README.md) / 简体中文
 
-`unplugin-auto-import-antd` is a resolver for [unplugin-auto-import](https://github.com/unplugin/unplugin-auto-import) that enables on-demand importing of antd components.
+`unplugin-auto-import-antd` 是 [unplugin-auto-import](https://github.com/unplugin/unplugin-auto-import) 的一个解析器，用于实现 antd 组件按需引入。
 
-> Only support antd v5+.
+> 仅支持 antd v5+.
 
-## Features
+## 特性
 
-- Support `Vite`, `Webpack` and more
-- Automatically imports components from `antd`
-- Support custom prefix for components
-- Support package alias import
+- 支持 `Vite`, `Webpack` 等
+- 支持自动引入 `antd` 组件
+- 支持使用自定义前缀重命名组件
+- 支持通过包的别名引入
 
-## Installation
+## 安装
 
 ### npm
 
@@ -39,7 +39,7 @@ pnpm add -D unplugin-auto-import-antd unplugin-auto-import
 bun add -D unplugin-auto-import-antd unplugin-auto-import
 ```
 
-## Usage
+## 使用
 
 ### Vite
 
@@ -73,7 +73,7 @@ module.exports = {
 }
 ```
 
-### Using custom prefix
+### 自定义前缀
 
 ```ts
 // vite.config.ts
@@ -93,11 +93,11 @@ export default defineConfig({
 })
 ```
 
-If specify a custom prefix，such as `A`, the way of writing components should changed from original `Button` to `AButton`.
+使用自定义前缀，如 `A`, 书写组件的方式有原本的 `Button` 变为 `AButton`。
 
-Equivalent to `import { Button as AButton } from 'antd'`.
+等价于 `import { Button as AButton } from 'antd'`
 
-### Using package alias
+### 包别名引入
 
 ```ts
 // vite.config.ts
@@ -117,9 +117,9 @@ export default defineConfig({
 })
 ```
 
-Install `antd` via an alias, such as `antd-v5`.
+通过别名安装 antd，如 antd-v5。
 
-Equivalent to `import { Button } from 'antd-v5'`.
+等价于 `import { Button } from 'antd-v5'`
 
 ## License
 
