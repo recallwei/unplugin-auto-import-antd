@@ -1,6 +1,6 @@
 {
   "name": "unplugin-auto-import-antd",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "unplugin-auto-import-antd is a resolver for unplugin-auto-import that enables on-demand importing of antd components.",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "repository": "github:recallwei/unplugin-auto-import-antd",
