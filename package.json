@@ -1,6 +1,6 @@
 {
   "name": "unplugin-auto-import-antd",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "unplugin-auto-import-antd is a resolver for unplugin-auto-import that enables on-demand importing of antd components.",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "repository": "github:recallwei/unplugin-auto-import-antd",
@@ -41,30 +41,33 @@
     "prettier:check": "prettier --check --ignore-unknown .",
     "prettier:fix": "prettier --write --ignore-unknown .",
     "cz": "git-cz",
-    "preinstall": "npx only-allow pnpm",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "devDependencies": {
-    "@brucesong/eslint-config-ts": "^1.0.14",
-    "@commitlint/cli": "^18.4.1",
-    "@commitlint/config-conventional": "^18.4.0",
+    "@bit-ocean/commitlint-config": "^0.0.17",
+    "@bit-ocean/cspell": "^0.0.17",
+    "@bit-ocean/eslint-config": "^0.0.17",
+    "@bit-ocean/prettier-config": "^0.0.17",
+    "@bit-ocean/tsconfig": "^0.0.17",
+    "@commitlint/cli": "^19.2.2",
+    "@commitlint/config-conventional": "^19.2.2",
     "commitizen": "^4.3.0",
-    "cspell": "^8.0.0",
-    "cz-git": "^1.7.1",
-    "eslint": "^8.53.0",
-    "husky": "^8.0.3",
-    "lint-staged": "^15.1.0",
-    "prettier": "^3.1.0",
+    "cspell": "^8.7.0",
+    "cz-git": "^1.9.1",
+    "eslint": "^8.57.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5",
     "unbuild": "^2.0.0"
+  },
+  "dependencies": {
+    "@changesets/cli": "^2.27.1",
+    "unplugin-auto-import": "^0.17.5"
   },
   "config": {
     "commitizen": {
       "path": "node_modules/cz-git"
     }
   },
-  "license": "MIT",
-  "dependencies": {
-    "@changesets/cli": "^2.26.2",
-    "unplugin-auto-import": "^0.16.7"
-  }
+  "license": "MIT"
 }
